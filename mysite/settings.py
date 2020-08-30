@@ -122,6 +122,6 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-LOGIN_REDIRECT_URL = 'http://127.0.0.1:8000/'
+LOGIN_REDIRECT_URL = 'post_list'
 
 
