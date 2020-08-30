@@ -18,10 +18,14 @@ from django.urls import path, include
 from django.conf.urls import url
 from django.contrib.auth import views as auth_views
 from django.contrib.auth.views import LoginView
+from django.contrib.auth.views import LogoutView
+from blog import views as core_views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 	path('', include('blog.urls')),
 	url(r'^login/$', LoginView.as_view(), name='login'),
-    url(r'^logout/$', LoginView.as_view(), name='logout'),
+    url(r'^logout/$', LogoutView.as_view(), name='logout'),
+	url(r'^signup/$', core_views.signup, name='signup'),
 ]
